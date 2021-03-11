@@ -1,6 +1,11 @@
 ﻿#include <iostream>
 #include <string>
 #include <cmath>
+
+//Сделать конвертер величин. Формат ввода: Направление_Перевода Величина.
+//Кулинария (чайная, столовая, кружка)
+
+
 int main() {
     int a, b;
     double k, v;
