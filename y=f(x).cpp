@@ -4,6 +4,12 @@
 #include <iostream>
 #include <cmath>
 
+//Дана функция y = f(x).Найти значение функции по x :
+//y = 2x - 15, если x > 2
+//y = 5, если x = 2
+//y = 3 * | x - 1 | -8, если x < 2
+
+
 int main()
 {
     float x;
