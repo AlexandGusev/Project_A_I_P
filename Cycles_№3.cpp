@@ -28,6 +28,9 @@ int main()
     if (x == 0) {
         std::cout << "Divide on zero" << std::endl;
     }
+    if (A < 7) {
+        std::cout << "Please, enter another number A" << std::endl;
+    }
     else {
         for (int i = 7; i <= A; i++) {
             if (i % 2 == 1) {
