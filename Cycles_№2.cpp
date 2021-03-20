@@ -13,7 +13,6 @@
 int main()
 {
     float dx, xs, xf;
-    const float eps = 0.00000001;
     std::cout << "Enter diapason [xs ; xf]" << std::endl;
     std::cin >> xs >> xf;
     
