@@ -16,11 +16,15 @@ int main()
 
     std::cout << "Enter X " << std::endl;
     std::cin >> x;
+
     std::cout << "Enter A more then 7 " << std::endl;
     std::cin >> A;
+
     std::cout.precision(3);
+
     float y ;
     float a = 0;
+
     if (x == 0) {
         std::cout << "Divide on zero" << std::endl;
     }
