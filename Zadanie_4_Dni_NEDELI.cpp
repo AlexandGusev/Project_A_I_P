@@ -2,53 +2,70 @@
 //
 
 #include <iostream>
+#include<string>
 
 //Пользователь вводит день месяца.Вывести на экран день недели.Считаем, что 1 - е число месяца – это вторник.
+void weeks(int a) {
+    if (a <= 31)
+    {
+        switch (a % 7)
+        {
+        case 0:
+            std::cout << "Monday" << std::endl;
+            break;
+        case 6:
+            std::cout << "Sunday" << std::endl;
+            break;
+        case 5:
+            std::cout << "Saturday" << std::endl;
+            break;
+        case 4:
+            std::cout << "Friday" << std::endl;
+            break;
+        case 3:
+            std::cout << "Thursday" << std::endl;
+            break;
+        case 2:
+            std::cout << "Wednesday" << std::endl;
+            break;
+        case 1:
+            std::cout << "Tuesday" << std::endl;
+            break;
+        }
+    }
+    else {
+        std::cin >> a;
+        weeks(a);
+    }
+    
 
+    
+    
+}
 
 int main()
 {
     
-    int a;
+    int x;
     
-    std::cin >> a;
+    std::cin >> x;
     
 
 
-    if (a % 7 == 0) {
-        std::cout << "Monday" << std::endl;
+    if (x <= 31) {
+        weeks(x);
     }
     else {
-        if ((a % 7)-6 == 0) {
-            std::cout << "Sunday" << std::endl;
-        }
-        else {
-            if ((a % 7) - 5 == 0) {
-                std::cout << "Saturday" << std::endl;
-            }
-            else {
-                if ((a % 7) - 4 == 0) {
-                    std::cout << "Friday" << std::endl;
-                }
-                else {
-                    if ((a % 7) - 3 == 0) {
-                        std::cout << "Thursday" << std::endl;
-                    }
-                    else {
-                        if ((a % 7) - 2 == 0) {
-                            std::cout << "Wednesday" << std::endl;
-                        }
-                        else {
-                            
-                                std::cout << "Tuesday" << std::endl;
-                            
-                            
-                        }
-                    }
-                }
-            }
-        }
+        std::cout << "Maximum of 31 days per month" << std::endl;
+        weeks(x);
+
     }
+    
+
+
+
+        
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
