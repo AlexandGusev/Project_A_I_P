@@ -7,6 +7,19 @@
 //Пользователь задаёт число Ч и Х.Посчитать y :
 //y = -1/(7x) + 2/(8x) - 3/(9*x) + ±(…)/Ч*x
 
+void fx(float b, float p, int Y, float o) {
+    for (int i = 7; i <= Y; i++) {
+        if (i % 2 == 1) {
+            b = ((i - 6) / (i * p)) * (-1);
+        }
+        else {
+            b = (i - 6) / (i * p);
+        }
+
+        o += b;
+    }
+    std::cout << "Answer is " << o << std::endl;
+}
 
 int main()
 {
@@ -22,7 +35,7 @@ int main()
 
     std::cout.precision(3);
 
-    float y ;
+    float y=0;
     float a = 0;
 
     if (x == 0) {
@@ -32,22 +45,10 @@ int main()
         std::cout << "Please, enter another number A" << std::endl;
     }
     else {
-        for (int i = 7; i <= A; i++) {
-            if (i % 2 == 1) {
-                y = ((i - 6) / (i * x)) * (-1);
-            }
-            else {
-                y = (i - 6) / (i * x);
-            }
+        fx(y, x, A, a);
 
-            a += y;
-
-        }
-        std::cout << "Answer is " << a << std::endl;
-    }
-    
-    
-    
+        
+    }    
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
